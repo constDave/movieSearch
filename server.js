@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
 const axios = require("axios");
-const dotenv = require('dotenv')
+const dotenv = require("dotenv");
 
-dotenv.config()
+dotenv.config();
 
 app.use(express.static("public"));
 
@@ -15,13 +15,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/results", (req, res) => {
-  const searchQuery = req.query.search
-  console.log(searchQuery);
-  
-  axios(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&s=${searchQuery}`)
-    .then(data => res.render("results", {
-      data: data.data.Search
-    }))
+  const searchQuery = req.query.search;
+
+  axios(
+    `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&s=${searchQuery}`
+  )
+    .then(data =>
+      res.render("results", {
+        data: data.data.Search
+      })
+    )
     .catch(error => console.error(error));
 });
 

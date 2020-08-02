@@ -4,12 +4,17 @@
 <div class="results-container">
   <% data.forEach(movie => { %>
   <ul>
-    <li>
-      <h3><%= movie.Title%> - <%= movie.Year%></h3>
-      <img src="<%= movie.Poster %> " alt="Movie Poster" />
-    </li>
-  </ul>
-  <% }) %>
+      <a href="https://www.imdb.com/title/<%= movie.imdbID%>" target="_blank">
+        <li>
+            <h3><%= movie.Title%> - <%= movie.Year%></h3>
+            <img src="<%= movie.Poster %> " alt="Movie Poster" />
+        </li>
+        <a href="https://www.imdb.com/title/<%= movie.imdbID%>/ratings">Movie Rating Stats</a>
+        </ul>
+        <% }) %>
+    </a>
+
+    
 </div>
 
 <a href="/" id="search-again">Search Again</a>
