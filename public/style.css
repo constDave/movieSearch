@@ -1,0 +1,39 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #40514e;
+}
+
+body {
+  background: #f5f5f5;
+}
+button {
+  background: #2f89fc;
+  color: #f5f5f5;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input {
+  padding: 5px;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  width: 300px;
+  margin: auto;
+  list-style-type: none;
+}
+
+h3 {
+  color: #1f58a0;
+}
+
+#search-again {
+  font-size: 1.5em;
+}

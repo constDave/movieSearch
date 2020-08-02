@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<h1>Search Results</h1>
+<div class="results-container">
+  <% data.forEach(movie => { %>
+  <ul>
+    <li>
+      <h3><%= movie.Title%> - <%= movie.Year%></h3>
+      <img src="<%= movie.Poster %> " alt="Movie Poster" />
+    </li>
+  </ul>
+  <% }) %>
+</div>
+
+<a href="/" id="search-again">Search Again</a>
+
+<%- include('partials/footer') %>
